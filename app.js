@@ -1,171 +1,168 @@
-/* Funktioniert ohne Framework, Build-Schritt, Backend oder externe Dienste. */
+/* PromptWerk 0.2 — reines Vanilla JavaScript; keine Abhängigkeiten. */
 (() => {
   'use strict';
   const prompts = Array.isArray(window.PROMPTS) ? window.PROMPTS : [];
   const $ = (selector) => document.querySelector(selector);
-  const elements = {
-    search: $('#search'), categories: $('#categories'), grid: $('#prompt-grid'),
-    count: $('#result-count'), total: $('#total-count'), empty: $('#empty'),
-    dialog: $('#prompt-dialog'), title: $('#dialog-title'), category: $('#dialog-category'),
-    description: $('#dialog-description'), variablesWrap: $('#variables-wrap'),
-    variables: $('#variables'), preview: $('#preview'), toast: $('#toast'),
-  };
-  let activeCategory = 'Alle';
-  let current = null;
-  let values = {};
-  let toastTimeout;
-
-  const categories = ['Alle', ...new Set(prompts.map((p) => p.category))];
-  elements.total.textContent = `${prompts.length} VORLAGEN`;
-
-  function element(tag, className, value) {
+  const el = (tag, className = '', text) => {
     const node = document.createElement(tag);
     if (className) node.className = className;
-    if (value !== undefined) node.textContent = value;
+    if (text !== undefined) node.textContent = text;
     return node;
-  }
-
-  function renderFilters() {
-    elements.categories.replaceChildren();
-    categories.forEach((category) => {
-      const button = element('button', `filter${category === activeCategory ? ' active' : ''}`, category);
-      button.type = 'button';
-      button.setAttribute('aria-pressed', String(category === activeCategory));
-      button.addEventListener('click', () => {
-        activeCategory = category;
-        renderFilters();
-        renderCards();
-      });
-      elements.categories.append(button);
-    });
-  }
-
-  function renderCards() {
-    const query = elements.search.value.toLocaleLowerCase('de').trim();
-    const matching = prompts.filter((p) => (activeCategory === 'Alle' || p.category === activeCategory)
-      && [p.title, p.category, p.description, p.prompt].join(' ').toLocaleLowerCase('de').includes(query));
-    const cards = document.createDocumentFragment();
-    matching.forEach((p) => {
-      const card = element('button', 'prompt-card');
-      card.type = 'button';
-      card.append(element('span', 'card-category', p.category));
-      card.append(element('span', 'card-title', p.title));
-      card.append(element('span', 'card-desc', p.description));
-      const bottom = element('span', 'card-bottom');
-      bottom.append(element('span', '', 'Vorlage ansehen'));
-      bottom.append(element('span', 'card-arrow', '↗'));
-      card.append(bottom);
-      card.addEventListener('click', () => openPrompt(p));
-      cards.append(card);
-    });
-    elements.grid.replaceChildren(cards);
-    elements.count.textContent = `${matching.length} von ${prompts.length} Prompts`;
-    elements.empty.hidden = matching.length > 0;
-  }
-
+  };
+  const nodes = {
+    search: $('#search'), categories: $('#categories'), list: $('#prompt-list'),
+    count: $('#result-count'), title: $('#list-title'), empty: $('#empty'),
+    favoritesOnly: $('#favorites-only'), favCount: $('#favorite-count'), sort: $('#sort'),
+    dialog: $('#prompt-dialog'), dialogTitle: $('#dialog-title'), dialogCategory: $('#dialog-category'),
+    dialogDescription: $('#dialog-description'), variables: $('#variables'),
+    noVariables: $('#no-variables'), preview: $('#preview'), toast: $('#toast')
+  };
+  const categoryOrder = [...new Set(prompts.map(p => p.category))];
+  const counts = Object.fromEntries(categoryOrder.map(cat => [cat, prompts.filter(p => p.category === cat).length]));
+  const favoritesKey = 'promptwerk-favorites-v02';
+  let favorites = new Set();
+  try { const saved = JSON.parse(localStorage.getItem(favoritesKey) || '[]'); if(Array.isArray(saved)) favorites = new Set(saved.filter(id => prompts.some(p => p.id === id))); } catch {}
+  let activeCategory = 'Alle', favoritesOnly = false, activePrompt = null, variableValues = {}, toastTimer;
   const variablePattern = /\[([A-ZÄÖÜ0-9_]+)\]/g;
-  function extractedVariables(text) {
-    return [...new Set([...text.matchAll(variablePattern)].map((match) => match[1]))];
-  }
-  function personalizedText() {
-    if (!current) return '';
-    return current.prompt.replace(variablePattern, (match, key) => (values[key] || '').trim() || match);
-  }
-  function updatePreview() { elements.preview.textContent = personalizedText(); }
+  const vars = (text) => [...new Set([...text.matchAll(variablePattern)].map(m => m[1]))];
+  const personalized = () => activePrompt ? activePrompt.prompt.replace(variablePattern, (match, key) => (variableValues[key] || '').trim() || match) : '';
 
-  function openPrompt(prompt, { changeHash = true } = {}) {
-    current = prompt;
-    values = {};
-    elements.title.textContent = prompt.title;
-    elements.category.textContent = prompt.category;
-    elements.description.textContent = prompt.description;
-    elements.variables.replaceChildren();
-    const names = extractedVariables(prompt.prompt);
-    elements.variablesWrap.hidden = names.length === 0;
-    names.forEach((name) => {
-      const field = element('div', 'variable-field');
-      const label = element('label', '', name.replaceAll('_', ' ').toLowerCase());
-      const input = element('textarea');
-      input.rows = name === 'TEXT' || name === 'CODE' || name === 'NOTIZEN' || name === 'STICHPUNKTE' ? 3 : 1;
-      input.placeholder = `Hier ${name.toLowerCase().replaceAll('_', ' ')} eintragen …`;
-      input.id = `variable-${name}`;
+  $('#total-count').textContent = prompts.length;
+  $('#category-count').textContent = categoryOrder.length;
+  $('#sidebar-count').textContent = categoryOrder.length;
+  $('#footer-count').textContent = prompts.length;
+
+  function renderCategories() {
+    nodes.categories.replaceChildren();
+    ['Alle', ...categoryOrder].forEach(cat => {
+      const btn = el('button', `category${cat === activeCategory ? ' active' : ''}`);
+      btn.type = 'button'; btn.setAttribute('aria-pressed', String(cat === activeCategory));
+      btn.append(el('span', '', cat === 'Alle' ? 'Alle Themen' : cat), el('span', 'cat-count', counts[cat] ?? prompts.length));
+      btn.addEventListener('click', () => {
+        activeCategory = cat; renderCategories(); renderList();
+      });
+      nodes.categories.append(btn);
+    });
+  }
+  function getMatching() {
+    const query = nodes.search.value.trim().toLocaleLowerCase('de');
+    let result = prompts.filter(p => (activeCategory === 'Alle' || p.category === activeCategory)
+      && (!favoritesOnly || favorites.has(p.id))
+      && (!query || [p.title, p.description, p.category, p.prompt].join(' ').toLocaleLowerCase('de').includes(query)));
+    if (nodes.sort.value === 'az') result = [...result].sort((a, b) => a.title.localeCompare(b.title, 'de'));
+    if (nodes.sort.value === 'za') result = [...result].sort((a, b) => b.title.localeCompare(a.title, 'de'));
+    return result;
+  }
+  function renderList() {
+    const matching = getMatching();
+    const items = document.createDocumentFragment();
+    matching.forEach((p, index) => {
+      const row = el('article', 'prompt-row');
+      const btn = el('button', 'row-main'); btn.type = 'button';
+      btn.setAttribute('aria-label', `${p.title} öffnen`);
+      btn.append(el('span', 'row-index', String(index + 1).padStart(2, '0')));
+      const content = el('span', 'row-content');
+      content.append(el('span', 'row-title', p.title), el('span', 'row-desc', p.description));
+      btn.append(content, el('span', 'row-cat', p.category), el('span', 'row-arrow', '↗'));
+      btn.addEventListener('click', () => openPrompt(p));
+      const fav = el('button', `favorite-button${favorites.has(p.id) ? ' saved' : ''}`, favorites.has(p.id) ? '★' : '☆');
+      fav.type = 'button'; fav.setAttribute('aria-pressed', String(favorites.has(p.id)));
+      fav.setAttribute('aria-label', favorites.has(p.id) ? `${p.title} aus Merkliste entfernen` : `${p.title} merken`);
+      fav.title = favorites.has(p.id) ? 'Aus Merkliste entfernen' : 'Zur Merkliste hinzufügen';
+      fav.addEventListener('click', () => {
+        if(favorites.has(p.id)) favorites.delete(p.id); else favorites.add(p.id);
+        try { localStorage.setItem(favoritesKey, JSON.stringify([...favorites])); } catch {}
+        renderList();
+      });
+      row.append(btn, fav); items.append(row);
+    });
+    nodes.list.replaceChildren(items);
+    nodes.title.textContent = activeCategory === 'Alle' ? 'Alle Vorlagen' : activeCategory;
+    nodes.count.textContent = `${matching.length} von ${prompts.length} Vorlagen`;
+    nodes.favCount.textContent = favorites.size;
+    nodes.empty.hidden = matching.length !== 0;
+  }
+  function updatePreview() { nodes.preview.textContent = personalized(); }
+  function openPrompt(prompt, changeHash = true) {
+    activePrompt = prompt; variableValues = {};
+    nodes.dialogCategory.textContent = prompt.category;
+    nodes.dialogTitle.textContent = prompt.title;
+    nodes.dialogDescription.textContent = prompt.description;
+    nodes.variables.replaceChildren();
+    const names = vars(prompt.prompt);
+    nodes.noVariables.hidden = names.length !== 0;
+    names.forEach((name, index) => {
+      const wrap = el('div', 'variable-field');
+      const label = el('label', '', name.replaceAll('_', ' ').toLocaleLowerCase('de'));
+      const input = el('textarea'); input.id = `variable-${index}`;
+      input.rows = /TEXT|CODE|NOTIZEN|STICH|DATEN|INHALT|DOKUMENT|ERGEBNIS|AUSSCHREIBUNG|KUNDENAUSSAGEN|ZEUGNIS|SCHEMA/.test(name) ? 3 : 1;
+      input.placeholder = `${label.textContent} eingeben …`;
       label.htmlFor = input.id;
-      input.addEventListener('input', () => { values[name] = input.value; updatePreview(); });
-      field.append(label, input);
-      elements.variables.append(field);
+      input.addEventListener('input', () => { variableValues[name] = input.value; updatePreview(); });
+      wrap.append(label, input); nodes.variables.append(wrap);
     });
     updatePreview();
-    if (changeHash) { try { history.replaceState(null, '', `#${encodeURIComponent(prompt.id)}`); } catch { /* Eingeschränkte lokale Browser-Umgebung */ } }
-    if (!elements.dialog.open) elements.dialog.showModal();
+    if (changeHash) {
+      try { history.replaceState(null, '', `#${encodeURIComponent(prompt.id)}`); } catch {}
+    }
+    if (!nodes.dialog.open) nodes.dialog.showModal();
   }
   function closePrompt() {
-    elements.dialog.close();
-    current = null;
-    try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch { /* Eingeschränkte lokale Browser-Umgebung */ }
-  }
-
-  async function copyText(value, message) {
-    try {
-      if (navigator.clipboard && window.isSecureContext) {
-        await navigator.clipboard.writeText(value);
-      } else {
-        const temporary = element('textarea');
-        temporary.value = value;
-        temporary.style.position = 'fixed';
-        temporary.style.left = '-9999px';
-        document.body.append(temporary);
-        temporary.select();
-        const succeeded = document.execCommand('copy');
-        temporary.remove();
-        if (!succeeded) throw new Error('Clipboard unavailable');
-      }
-      toast(message);
-    } catch {
-      toast('Kopieren nicht möglich. Bitte den Text manuell markieren.');
-    }
+    if(nodes.dialog.open) nodes.dialog.close();
+    activePrompt = null;
+    try { history.replaceState(null, '', location.pathname + location.search); } catch {}
   }
   function toast(message) {
-    clearTimeout(toastTimeout);
-    elements.toast.textContent = message;
-    elements.toast.classList.add('visible');
-    toastTimeout = setTimeout(() => elements.toast.classList.remove('visible'), 2800);
+    clearTimeout(toastTimer); nodes.toast.textContent = message; nodes.toast.classList.add('visible');
+    toastTimer = setTimeout(() => nodes.toast.classList.remove('visible'), 2600);
   }
-
-  $('#copy-prompt').addEventListener('click', () => copyText(personalizedText(), 'Prompt kopiert.'));
+  async function copyText(value, success) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(value);
+      else {
+        const textarea = el('textarea'); textarea.value = value;
+        textarea.style.position = 'fixed'; textarea.style.left = '-9999px';
+        document.body.append(textarea); textarea.select();
+        const ok = document.execCommand('copy'); textarea.remove();
+        if (!ok) throw Error('Clipboard API unavailable');
+      }
+      toast(success);
+    } catch { toast('Kopieren nicht möglich – Text bitte manuell markieren.'); }
+  }
+  nodes.search.addEventListener('input', renderList);
+  nodes.sort.addEventListener('change', renderList);
+  nodes.favoritesOnly.addEventListener('click', () => {
+    favoritesOnly = !favoritesOnly;
+    nodes.favoritesOnly.setAttribute('aria-pressed', String(favoritesOnly));
+    renderList();
+  });
+  $('#reset').addEventListener('click', () => {
+    activeCategory = 'Alle'; favoritesOnly = false;
+    nodes.search.value = ''; nodes.sort.value = 'editorial';
+    nodes.favoritesOnly.setAttribute('aria-pressed', 'false');
+    renderCategories(); renderList(); nodes.search.focus();
+  });
+  $('#copy-prompt').addEventListener('click', () => copyText(personalized(), 'Prompt kopiert.'));
   $('#copy-link').addEventListener('click', () => {
-    if (window.location.protocol === 'file:') {
-      toast('Für teilbare Links zuerst über GitHub Pages veröffentlichen.');
-      return;
-    }
-    copyText(window.location.href, 'Link kopiert.');
+    if (location.protocol === 'file:') { toast('Teilen funktioniert über die veröffentlichte GitHub-Pages-Seite.'); return; }
+    copyText(location.href, 'Link kopiert.');
   });
   $('#close-dialog').addEventListener('click', closePrompt);
-  elements.dialog.addEventListener('click', (event) => {
-    if (event.target === elements.dialog) closePrompt();
-  });
-  elements.dialog.addEventListener('cancel', (event) => { event.preventDefault(); closePrompt(); });
-  elements.search.addEventListener('input', renderCards);
-  $('#reset').addEventListener('click', () => {
-    elements.search.value = '';
-    activeCategory = 'Alle';
-    renderFilters();
-    renderCards();
-    elements.search.focus();
-  });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === '/' && !elements.dialog.open && !['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) {
-      event.preventDefault(); elements.search.focus();
+  nodes.dialog.addEventListener('cancel', event => { event.preventDefault(); closePrompt(); });
+  nodes.dialog.addEventListener('click', event => { if (event.target === nodes.dialog) closePrompt(); });
+  document.addEventListener('keydown', event => {
+    if (event.key === '/' && !nodes.dialog.open && !['INPUT','TEXTAREA'].includes(document.activeElement?.tagName)) {
+      event.preventDefault(); nodes.search.focus();
     }
   });
   window.addEventListener('hashchange', () => {
-    const id = decodeURIComponent(window.location.hash.slice(1));
-    const prompt = prompts.find((p) => p.id === id);
-    if (prompt) openPrompt(prompt, { changeHash: false });
+    const id = decodeURIComponent(location.hash.slice(1));
+    const p = prompts.find(x => x.id === id);
+    if (p) openPrompt(p, false);
+    else if(nodes.dialog.open) closePrompt();
   });
-
-  renderFilters();
-  renderCards();
-  const initialId = decodeURIComponent(window.location.hash.slice(1));
-  const selectedPrompt = prompts.find((p) => p.id === initialId);
-  if (selectedPrompt) openPrompt(selectedPrompt, { changeHash: false });
+  renderCategories(); renderList();
+  const firstId = decodeURIComponent(location.hash.slice(1));
+  const p = prompts.find(x => x.id === firstId);
+  if (p) openPrompt(p, false);
 })();

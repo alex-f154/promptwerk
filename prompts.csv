@@ -1,0 +1,526 @@
+﻿id,category,title,description,prompt
+text-umschreiben,Schreiben & Kommunikation,Text natürlich umformulieren,Für verständlichere Texte ohne KI-Floskeln.,"Überarbeite den folgenden Text für [ZIELGRUPPE]. Ziel: [ZIEL], Ton: [TON].
+
+Behalte alle inhaltlichen Aussagen bei, erfinde keine Fakten und entferne unnötige Floskeln. Formuliere klar, natürlich und präzise. Wenn Informationen fehlen, markiere sie statt sie zu ergänzen.
+
+Gib zuerst nur die überarbeitete Version aus und darunter maximal drei wesentliche Änderungen.
+
+Text:
+[TEXT]"
+mail-stichpunkte,Schreiben & Kommunikation,E-Mail aus Stichpunkten,Aus wenigen Notizen eine sendefertige E-Mail erstellen.,"Formuliere aus meinen Stichpunkten eine E-Mail.
+
+Empfänger: [EMPFÄNGER]
+Ziel der Nachricht: [ZIEL]
+Ton: freundlich, direkt und professionell
+Länge: so kurz wie möglich, so ausführlich wie nötig
+
+Schreibe eine passende Betreffzeile und eine versandfertige E-Mail. Erfinde keine Details. Wenn ein entscheidender Punkt fehlt, setze die Markierung „Angabe fehlt“ an die entsprechende Stelle.
+
+Stichpunkte:
+[STICHPUNKTE]"
+schwierige-nachricht,Schreiben & Kommunikation,Schwierige Nachricht formulieren,"Klar Grenzen setzen, ohne unnötig zu eskalieren.","Hilf mir, eine schwierige Nachricht zu verfassen.
+
+Situation: [SITUATION]
+Was ich erreichen will: [ZIEL]
+Was ich vermeiden will: [VERMEIDEN]
+
+Schreibe eine respektvolle, sachliche und klare Nachricht in natürlicher Sprache. Kein passiv-aggressiver Unterton, keine übertriebenen Entschuldigungen. Gib danach eine etwas diplomatischere und eine direktere Alternative. Weise auf missverständliche Formulierungen hin."
+ton-treffen-statt-ki-sprache,Schreiben & Kommunikation,Ton treffen statt KI-Sprache,Einen Text genau an Zielgruppe und Situation anpassen.,"Überarbeite [TEXT] für [ZIELGRUPPE] im Kontext [SITUATION].
+Der Ton soll [TON] sein. Erhalte Inhalt, Absicht und konkrete Fakten. Streiche leere Einleitungen, künstliche Begeisterung und Wiederholungen.
+Gib eine finale Version und eine kurze Erklärung von höchstens drei stilistischen Entscheidungen. Falls eine Aussage unklar ist, markiere sie separat statt sie umzudeuten."
+kurze-antwort-auf-lange-mail,Schreiben & Kommunikation,Kurze Antwort auf lange Mail,Eine ausführliche Nachricht präzise beantworten.,"Hier ist eine erhaltene Nachricht:
+[NACHRICHT]
+
+Mein Standpunkt und meine Informationen: [STANDPUNKT]
+Gewünschtes Ergebnis: [ZIEL]
+
+Bestimme zuerst, welche Fragen tatsächlich beantwortet werden müssen. Formuliere danach eine knappe Antwort mit klarer Aussage, passendem Ton und gegebenenfalls einer konkreten nächsten Aktion. Erfinde keine Zusagen, Termine oder Tatsachen. Antworte direkt mit dem Entwurf."
+sachliche-beschwerde,Schreiben & Kommunikation,Sachliche Beschwerde,"Ein Problem klar ansprechen, ohne unnötig Druck zu erzeugen.","Schreibe eine sachliche Beschwerde zu folgendem Vorgang: [VORGANG].
+Gesicherte Fakten: [FAKTEN].
+Gewünschte Lösung: [LÖSUNG].
+Adressat: [ADRESSAT].
+
+Gliedere die Nachricht in Anlass, überprüfbare Fakten und konkrete Bitte mit angemessener Frist, falls vorgegeben. Vermeide unbelegte Vorwürfe und juristische Behauptungen. Gib zusätzlich eine kürzere, besonders höfliche Fassung."
+feedback-geben,Schreiben & Kommunikation,Feedback geben,"Konkretes, umsetzbares Feedback formulieren.","Ich möchte [PERSON_ODER_ROLLE] Rückmeldung zu [VERHALTEN_ODER_ERGEBNIS] geben.
+Beobachtungen: [BEISPIELE].
+Wirkung: [AUSWIRKUNG].
+Gewünschte Veränderung: [WUNSCH].
+
+Formuliere Feedback ohne Zuschreibungen über Motive oder Charakter. Nutze konkrete Beobachtungen, beschreibe die Wirkung und ende mit einer offenen Frage. Gib eine kurze mündliche und eine schriftliche Version."
+meeting-einladung-mit-agenda,Schreiben & Kommunikation,Meeting-Einladung mit Agenda,Eine Besprechung sinnvoll vorbereiten.,"Erstelle eine Einladung für ein Meeting zu [THEMA].
+Teilnehmende: [TEILNEHMENDE].
+Verfügbare Zeit: [DAUER].
+Zielentscheidung oder Ergebnis: [ERGEBNIS].
+
+Schreibe eine aussagekräftige Betreffzeile, einen Einleitungssatz, eine nach Minuten gewichtete Agenda und klare Vorbereitungspunkte. Entferne Themen, die nicht zum Ergebnis beitragen. Fehlende Daten als Platzhalter kennzeichnen."
+absage-ohne-floskeln,Schreiben & Kommunikation,Absage ohne Floskeln,"Eine höfliche, eindeutige Absage schreiben.","Ich muss [ANFRAGE] von [PERSON] ablehnen.
+Begründung, die ich nennen möchte: [BEGRÜNDUNG].
+Beziehung zur Person: [BEZIEHUNG].
+
+Formuliere eine respektvolle, klare Absage ohne falsche Hoffnungen oder erfundene Ausreden. Biete nur Alternativen an, die tatsächlich aus meinem Kontext folgen. Gib eine kurze Chat-Nachricht und eine formellere E-Mail-Version."
+text-drastisch-kuerzen,Schreiben & Kommunikation,Text drastisch kürzen,Den Kern eines Textes ohne Bedeutungsverlust erhalten.,"Kürze [TEXT] für [KANAL] auf höchstens [LÄNGE] Wörter.
+Erhalte die Kernaussage, notwendige Zahlen und Einschränkungen. Entferne Wiederholungen, Vorreden und Füllwörter. Wenn wichtige Informationen nicht in die Länge passen, sage nach dem Ergebnis, welche Aussage entfallen musste. Keine neue Fakten hinzufügen."
+argumentation-schaerfen,Schreiben & Kommunikation,Argumentation schärfen,Eine Position fair und überzeugend formulieren.,"Meine Position lautet: [POSITION]. Zielgruppe: [ZIELGRUPPE]. Grundlage: [ARGUMENTE].
+
+Ordne die drei stärksten Argumente nach Überzeugungskraft, unterscheide Fakten von Einschätzungen und formuliere das beste berechtigte Gegenargument. Entwirf dann einen nüchternen Text mit These, Belegen, Gegenargument und Fazit. Mache Unsicherheit sichtbar; erfinde keine Quellen."
+einfach-erklaeren,Lernen & Verstehen,Komplexes einfach erklären,"Neue Themen verstehen, ohne Vorwissen vorauszusetzen.","Erkläre mir [THEMA], als hätte ich folgendes Vorwissen: [VORWISSEN].
+
+Beginne mit einer einfachen Erklärung in fünf Sätzen, verwende danach ein alltagsnahes Beispiel und erkläre die wichtigsten Fachbegriffe. Zeige anschließend, woran Anfänger das Thema häufig falsch verstehen.
+
+Schließe mit drei kurzen Kontrollfragen. Wenn du wichtige Vereinfachungen gemacht hast, benenne sie."
+lerntutor,Lernen & Verstehen,Interaktiver Lerntutor,"Nicht nur Antworten lesen, sondern wirklich üben.","Sei mein geduldiger Lerntutor für [THEMA]. Mein Niveau ist [NIVEAU], mein Lernziel [LERNZIEL].
+
+Stelle jeweils nur eine Frage oder Mini-Aufgabe und warte auf meine Antwort. Gib zuerst einen Hinweis, wenn ich feststecke, statt sofort die Lösung zu verraten. Erkläre Fehler konkret und passe den Schwierigkeitsgrad an mein Können an.
+
+Beginne mit einer kurzen Einstiegsfrage, um meinen Kenntnisstand einzuschätzen."
+lernplan,Lernen & Verstehen,Realistischen Lernplan entwickeln,Ein Ziel in machbare Lerneinheiten zerlegen.,"Erstelle einen realistischen Lernplan für [LERNZIEL].
+
+Ausgangsniveau: [NIVEAU]
+Zeit pro Woche: [ZEIT]
+Zeitraum: [ZEITRAUM]
+
+Priorisiere die Grundlagen, plane Wiederholung und praktische Übungen ein und halte den Aufwand im Rahmen meiner verfügbaren Zeit. Gib mir einen Wochenplan mit Lernzielen, konkreten Aufgaben und einem einfachen Selbsttest. Benenne Annahmen und unrealistische Ziele ausdrücklich."
+sokratischer-tutor,Lernen & Verstehen,Sokratischer Tutor,Eigenständig denken statt nur Lösungen ablesen.,"Hilf mir, [THEMA] zu lernen. Mein Niveau: [NIVEAU].
+Stelle immer nur eine Frage oder Aufgabe auf einmal. Gib bei Fehlern zuerst einen kleinen Hinweis statt sofort die Lösung. Passe die Schwierigkeit an meinen Antworten an. Fasse nach fünf Aufgaben meine Stärken, Lücken und die nächste sinnvolle Übung zusammen. Beginne mit einer kurzen Einstiegsfrage."
+wissen-in-karteikarten-verwandeln,Lernen & Verstehen,Wissen in Karteikarten verwandeln,Lernmaterial in prüfbare Fragen überführen.,"Verwandle diesen Stoff in höchstens [ANZAHL] Karteikarten:
+[STOFF]
+
+Formatiere als Tabelle mit Frage, präziser Antwort und Schwierigkeitsgrad. Prüfe Begriffsdefinitionen, Verständnis und Anwendung statt nur Wortlaut. Jede Karte soll eine einzelne Wissenseinheit prüfen. Ergänze nichts, was nicht im Material steht; markiere fehlende Grundlagen."
+pruefungssimulation,Lernen & Verstehen,Prüfungssimulation,Eine realistische Mini-Prüfung mit Auswertung.,"Simuliere eine Prüfung zum Thema [THEMA] auf Niveau [NIVEAU] im Format [PRÜFUNGSFORM]. Dauer: [MINUTEN] Minuten.
+
+Erstelle zuerst die Aufgaben ohne Lösungen. Verteile leichte, mittlere und anspruchsvolle Fragen. Warte auf meine Antworten, bewerte anhand eines transparenten Punkteschemas und zeige nur dort Lösungswege, wo ich Punkte verloren habe."
+feynman-test,Lernen & Verstehen,Feynman-Test,Wissenslücken durch eigene Erklärungen erkennen.,"Ich versuche, [THEMA] in eigenen Worten zu erklären:
+[MEINE_ERKLÄRUNG]
+
+Prüfe auf fachliche Fehler, unpräzise Begriffe und ausgelassene Zusammenhänge. Gib zuerst drei konkrete Rückfragen zu den schwächsten Stellen. Formuliere danach eine verständlichere Erklärung, die nur gesichertes Wissen enthält. Trenne Korrekturen von stilistischen Verbesserungen."
+praxisuebungen-statt-theorie,Lernen & Verstehen,Praxisübungen statt Theorie,Ein Thema durch reale Mini-Aufgaben lernen.,"Ich möchte [FÄHIGKEIT] lernen und kann [ZEIT] pro Tag investieren. Vorwissen: [VORWISSEN].
+
+Entwirf sieben kleine Übungen mit konkretem Ergebnis, Zeitbedarf und Prüfkriterium. Beginne mit sehr leichten Aufgaben und steigere die Schwierigkeit. Gib keine langen Theorieabschnitte. Nenne typische Fehler und wie ich erkenne, dass ich bereit für das nächste Niveau bin."
+fachtext-entschluesseln,Lernen & Verstehen,Fachtext entschlüsseln,Schwierige Texte Schritt für Schritt lesbar machen.,"Hilf mir, diesen Fachtext zu verstehen:
+[TEXT]
+
+Erkläre zuerst den roten Faden in einfacher Sprache. Erstelle ein Glossar für höchstens acht zentrale Begriffe. Übersetze die drei schwierigsten Aussagen in Alltagssprache und nenne jeweils, welche Nuance dabei verloren gehen könnte. Unterscheide belegte Aussagen von Annahmen des Autors."
+zwei-konzepte-auseinanderhalten,Lernen & Verstehen,Zwei Konzepte auseinanderhalten,Verwechslungsgefahr durch Gegenüberstellung reduzieren.,"Vergleiche [KONZEPT_A] und [KONZEPT_B] für jemanden mit [VORWISSEN].
+
+Zeige Gemeinsamkeiten und Unterschiede in einer Tabelle mit Zweck, Funktionsweise, Grenzen und Beispiel. Nenne danach drei Alltagssituationen, bei denen man beide leicht verwechselt. Schließe mit einer Merkregel und einer Kontrollfrage."
+lernfortschritt-ehrlich-pruefen,Lernen & Verstehen,Lernfortschritt ehrlich prüfen,"Feststellen, was wirklich sitzt und was nicht.","Ich habe [THEMA] gelernt. Hier sind meine bisherigen Aufgaben und Antworten:
+[ANTWORTEN]
+
+Bewerte unabhängig davon, wie selbstbewusst sie formuliert sind. Teile in sicher beherrscht, unsicher und noch nicht verstanden ein. Begründe jede Einstufung an einer konkreten Stelle. Empfiehl die kleinste sinnvolle nächste Übung und eine Methode zur erneuten Kontrolle nach einigen Tagen."
+notizen-aufgaben,Arbeit & Organisation,Notizen zu Aufgaben machen,"Entscheidungen, Aufgaben und Fragen aus Notizen extrahieren.","Strukturiere die folgenden Notizen. Trenne strikt zwischen:
+1. Entscheidungen
+2. Aufgaben (mit Verantwortlichen und Terminen, falls ausdrücklich genannt)
+3. Offenen Fragen
+4. Wichtigen Informationen
+
+Erfinde keine Verantwortlichen oder Termine. Kennzeichne fehlende Angaben mit „offen“. Entferne Wiederholungen, aber bewahre relevante Details. Beginne mit einer Zusammenfassung in maximal drei Sätzen.
+
+Notizen:
+[NOTIZEN]"
+priorisieren,Arbeit & Organisation,Aufgaben sinnvoll priorisieren,Wichtiges von bloßer Beschäftigung unterscheiden.,"Hilf mir, meine Aufgaben zu priorisieren. Berücksichtige Nutzen, Dringlichkeit, Zeitbedarf, Abhängigkeiten und Risiken.
+
+Verfügbare Zeit: [ZEIT]
+Aufgaben: [AUFGABEN]
+
+Erstelle drei Bereiche: „Heute“, „Später“, „Weglassen oder delegieren“. Gib zu jeder priorisierten Aufgabe eine knappe Begründung und den kleinsten sinnvollen nächsten Schritt. Plane maximal so viel ein, wie in die verfügbare Zeit passt."
+prozess-vereinfachen,Arbeit & Organisation,Arbeitsablauf vereinfachen,"Weniger Schritte, weniger manuelle Arbeit.","Analysiere diesen wiederkehrenden Ablauf: [ABLAUF].
+
+Ziel: [ZIEL]
+Rahmenbedingungen: [RAHMENBEDINGUNGEN]
+
+Identifiziere unnötige Schritte, Fehlerquellen und mögliche Automatisierungen. Unterscheide zwischen „sofort vereinfachen“, „später automatisieren“ und „nicht automatisieren“. Bewerte Lösungen nach Aufwand, Nutzen und Wartbarkeit. Empfiehl zuerst die einfachste praktikable Verbesserung."
+projekt-kickoff-in-einer-seite,Arbeit & Organisation,Projekt-Kickoff in einer Seite,"Ziel, Umfang und Verantwortung vor dem Start klären.","Erstelle ein einseitiges Projektbriefing für [PROJEKT].
+Ziel: [ZIEL]. Beteiligte: [BETEILIGTE]. Frist: [FRIST]. Rahmenbedingungen: [RAHMEN].
+
+Gliedere in Problem, messbares Ergebnis, Nicht-Ziele, Meilensteine, Verantwortliche, Risiken und offene Entscheidungen. Erfinde keine Zusagen oder Zuständigkeiten; kennzeichne Ungeklärtes deutlich. Maximal eine Bildschirmseite."
+entscheidungen-aus-meeting-ableiten,Arbeit & Organisation,Entscheidungen aus Meeting ableiten,"Beschlüsse, Aufgaben und offene Fragen trennen.","Analysiere diese Meeting-Notizen:
+[NOTIZEN]
+
+Erstelle drei getrennte Tabellen: getroffene Entscheidungen, vereinbarte Aufgaben und offene Fragen. Aufgaben benötigen Ergebnis, zuständige Person und Frist, sofern genannt. Fehlende Besitzer oder Termine mit „offen“ kennzeichnen. Keine Vorschläge als beschlossene Maßnahmen darstellen."
+tagesplanung-mit-puffer,Arbeit & Organisation,Tagesplanung mit Puffer,Einen realistischen Tag statt einer Wunschliste planen.,"Plane meinen Arbeitstag mit [STUNDEN] nutzbaren Stunden.
+Aufgaben: [AUFGABEN]. Fixtermine: [TERMINE]. Energiehoch: [ENERGIE].
+
+Berücksichtige Wechselkosten und mindestens 15 % ungeplanten Puffer. Markiere höchstens drei Muss-Aufgaben. Lege Blöcke mit klaren Ergebnissen fest und liste ausdrücklich auf, was heute nicht mehr realistisch ist."
+standardprozess-dokumentieren,Arbeit & Organisation,Standardprozess dokumentieren,Wiederkehrende Tätigkeiten verständlich aufschreiben.,"Schreibe eine kurze Arbeitsanweisung für [PROZESS].
+Ablaufnotizen: [SCHRITTE]. Zielgruppe: [ZIELGRUPPE].
+
+Struktur: Zweck, Voraussetzungen, Schritte, Kontrollpunkte, häufige Fehler und Abbruch-/Eskalationsfall. Formuliere jeden Schritt als überprüfbare Handlung. Erfinde keine Systemmenüs oder Berechtigungen. Wo Informationen fehlen, formuliere konkrete Rückfragen."
+aufgaben-delegieren,Arbeit & Organisation,Aufgaben delegieren,Eine Übergabe ohne Missverständnisse vorbereiten.,"Ich möchte [AUFGABE] an [ROLLE] übergeben.
+Zielzustand: [ERGEBNIS]. Deadline: [FRIST]. Freiheiten: [SPIELRAUM].
+
+Erstelle eine Übergabenachricht mit Zweck, Lieferobjekt, Definition von fertig, Ressourcen und zwei sinnvollen Zwischenchecks. Trenne verbindliche Vorgaben von optionalen Hinweisen. Keine implizite Dauerüberwachung verlangen."
+woechentliches-review,Arbeit & Organisation,Wöchentliches Review,"Ergebnisse, Engpässe und nächste Schritte herausarbeiten.","Führe eine Wochenrückschau auf Basis dieser Fakten durch:
+[WOCHENNOTIZEN]
+
+Ordne in erledigt, blockiert, offen und gelernt. Hebe höchstens drei Ursachen für Verzögerungen hervor und schlage jeweils eine konkrete Gegenmaßnahme vor. Formuliere drei Prioritäten für kommende Woche. Frage bei fehlenden wesentlichen Zahlen nach, statt Leistungen zu erfinden."
+prozessautomatisierung-pruefen,Arbeit & Organisation,Prozessautomatisierung prüfen,Vor einer Automatisierung Nutzen und Risiken verstehen.,"Prüfe, ob [PROZESS] automatisiert werden sollte.
+Häufigkeit: [HÄUFIGKEIT]. Aufwand pro Durchlauf: [AUFWAND]. Fehlerquellen: [FEHLER]. Tools: [TOOLS].
+
+Unterscheide Standardisierung, Teilautomatisierung und Vollautomatisierung. Vergleiche Aufwand, erwarteten Nutzen, Datenschutz und Wartung. Schlage einen kleinen Test mit Rückfalloption vor. Berechne Einsparungen nur, wenn belastbare Werte vorliegen."
+statusupdate-fuer-stakeholder,Arbeit & Organisation,Statusupdate für Stakeholder,Einen Projektstatus ohne Schönfärberei berichten.,"Schreibe einen knappen Projektstatus zu [PROJEKT] für [ZIELGRUPPE].
+Bisherige Ergebnisse: [ERGEBNISSE]. Probleme: [PROBLEME]. Nächste Schritte: [SCHRITTE].
+
+Nutze die Abschnitte Stand, Veränderung seit letztem Update, Risiken, benötigte Entscheidung. Benutze keine Ampelfarbe ohne nachvollziehbare Grundlage. Maximal 180 Wörter."
+entscheidung,Entscheidungen & Ideen,Entscheidung strukturiert treffen,Alternativen nüchtern vergleichen.,"Ich möchte entscheiden zwischen [OPTIONEN].
+
+Mein Ziel: [ZIEL]
+Wichtige Kriterien: [KRITERIEN]
+Einschränkungen: [GRENZEN]
+
+Erstelle eine übersichtliche Vergleichstabelle mit Stärken, Schwächen, Risiken und offenen Annahmen. Gewichte keine Kriterien ohne meine Vorgabe. Zeige, unter welchen Bedingungen welche Option gewinnt, und gib eine begründete Empfehlung. Frage nur nach Informationen, die die Entscheidung wirklich ändern könnten."
+idee-kritisieren,Entscheidungen & Ideen,Idee kritisch prüfen,Schwachstellen finden statt nur Zustimmung bekommen.,"Prüfe folgende Idee wie ein konstruktiver, kritischer Sparringspartner: [IDEE].
+
+Zielgruppe: [ZIELGRUPPE]
+Erfolg wäre: [ERFOLG]
+
+Nenne den stärksten Nutzen, die fünf wichtigsten Annahmen, drei realistische Gründe fürs Scheitern und einen möglichst günstigen Test, der innerhalb einer Woche Erkenntnisse liefert. Trenne Fakten, Einschätzungen und offene Fragen. Sei sachlich, nicht euphorisch."
+ideen-entwickeln,Entscheidungen & Ideen,Gute Ideen entwickeln,Von einer Herausforderung zu konkreten Ansätzen.,"Entwickle zehn unterschiedliche Lösungsideen für [PROBLEM].
+
+Zielgruppe: [ZIELGRUPPE]
+Budget/Zeit: [RAHMEN]
+
+Vermeide zehn Varianten derselben Idee. Gib jeder Idee einen Namen und beschreibe Nutzen, groben Aufwand und größten Haken in einem Satz. Wähle anschließend drei vielversprechende Ansätze aus und formuliere je einen ersten Test, ohne direkt ein Großprojekt daraus zu machen."
+pre-mortem-durchfuehren,Entscheidungen & Ideen,Pre-Mortem durchführen,"Vorab herausfinden, woran ein Vorhaben scheitern könnte.","Stell dir vor, [VORHABEN] ist in [ZEITRAUM] gescheitert.
+Ziele: [ZIELE]. Rahmenbedingungen: [RAHMEN].
+
+Nenne die sieben plausibelsten Gründe rückblickend, nicht bloß generische Risiken. Bewerte Eintrittswahrscheinlichkeit und Schadenshöhe qualitativ, begründe kurz und schlage früh erkennbare Signale sowie eine Vorbeugung vor. Benenne auch Risiken, die wir nicht kontrollieren können."
+prioritaeten-mit-trade-offs,Entscheidungen & Ideen,Prioritäten mit Trade-offs,Alternativen anhand echter Kriterien bewerten.,"Ich muss zwischen [OPTIONEN] wählen. Kriterien mit Priorität: [KRITERIEN]. Nicht verhandelbar: [MUSS].
+
+Erstelle eine Vergleichsmatrix und unterscheide harte Ausschlusskriterien von weichen Vorlieben. Trage nur belegte Informationen ein; nutze „unbekannt“ für Lücken. Zeige, welche Annahme die Entscheidung am ehesten umdrehen könnte. Gib erst danach eine bedingte Empfehlung."
+zweitmeinung-als-gegenposition,Entscheidungen & Ideen,Zweitmeinung als Gegenposition,Eigene Pläne ernsthaft hinterfragen lassen.,"Meine aktuelle Entscheidung lautet: [ENTSCHEIDUNG]. Gründe: [GRÜNDE].
+
+Argumentiere zunächst so stark wie möglich für eine andere vernünftige Position. Prüfe danach meine wichtigsten Annahmen und mögliche blinde Flecken. Vermeide künstliche Ausgewogenheit: Wo eine Seite deutlich besser begründet ist, sage das. Schließe mit drei Fragen, die den Ausschlag geben würden."
+idee-in-experiment-uebersetzen,Entscheidungen & Ideen,Idee in Experiment übersetzen,Eine Annahme mit wenig Aufwand testen.,"Idee: [IDEE]. Zielgruppe: [ZIELGRUPPE]. Kritische Annahme: [ANNAHME]. Ressourcen: [RESSOURCEN].
+
+Entwirf ein Experiment, das maximal [ZEIT] dauert. Definiere Testhandlung, messbares Erfolgskriterium, notwendige Beobachtungen und Abbruchregel. Trenne Signale von Selbstbestätigung. Nenne vor allem, was ein negatives Ergebnis bedeuten würde."
+chancen-gegen-aufwand-abwaegen,Entscheidungen & Ideen,Chancen gegen Aufwand abwägen,Ideen nach Wirkung und Umsetzbarkeit sortieren.,"Ich habe diese Ideen: [IDEEN]. Meine Ressourcen: [RESSOURCEN]. Ziel: [ZIEL].
+
+Bewerte jede Idee qualitativ nach erwarteter Wirkung, Aufwand, Unsicherheit und Reversibilität. Keine erfundenen Punktwerte oder Renditen. Ordne die Ideen nach einer begründeten Umsetzungsreihenfolge und schlage nur für die stärksten zwei den ersten Schritt vor."
+nicht-ziele-definieren,Entscheidungen & Ideen,Nicht-Ziele definieren,Ein Projekt durch bewusste Abgrenzung vereinfachen.,"Ich plane [VORHABEN]. Unverzichtbares Ergebnis: [ERGEBNIS]. Häufige Zusatzwünsche: [ZUSATZWÜNSCHE].
+
+Definiere In Scope, Out of Scope und später möglich. Begründe jede Grenze aus dem Projektziel. Formuliere eine kurze Regel, nach der wir künftige Änderungswünsche prüfen. Zeige, welche Entscheidung noch vom Auftraggeber bestätigt werden muss."
+perspektivenwechsel,Entscheidungen & Ideen,Perspektivenwechsel,Ein Problem aus mehreren Rollen betrachten.,"Problem: [PROBLEM]. Beteiligte Rollen: [ROLLEN].
+
+Beschreibe je Rolle Ziele, Befürchtungen, Wissensstand und mögliche Fehlannahmen. Trenne gesicherte Informationen von Hypothesen. Zeige anschließend, wo Interessen übereinstimmen und wo ein echter Konflikt bleibt. Schlage eine Lösung vor, die nicht nur eine einzelne Perspektive optimiert."
+entscheidung-rueckgaengig-machen,Entscheidungen & Ideen,Entscheidung rückgängig machen?,Unterscheiden zwischen Durchhalten und Kurswechsel.,"Ich überlege, [ENTSCHEIDUNG] zu revidieren.
+Ursprüngliche Annahmen: [ANNAHMEN]. Neue Informationen: [NEU]. Bisheriger Aufwand: [AUFWAND].
+
+Prüfe, ob neue Daten die Prognose verändern oder nur die Stimmung. Benenne versunkene Kosten, Wechselkosten und reversible Optionen. Nenne konkrete Bedingungen, unter denen Weitermachen bzw. Umsteuern sinnvoll wäre. Gib keine Scheinsicherheit."
+recherche-plan,Recherche & Analyse,Fundierte Recherche beauftragen,Quellenlage prüfen und Unsicherheiten sichtbar machen.,"Untersuche [FRAGE]. Mein Anwendungsfall ist [KONTEXT].
+
+Nutze nach Möglichkeit aktuelle, nachvollziehbare Primärquellen. Nenne zu wesentlichen Aussagen die konkrete Quelle und das Veröffentlichungsdatum. Trenne gesicherte Fakten, plausible Einschätzungen und offene Fragen. Erfinde niemals Quellen oder Links. Falls du keinen Webzugriff hast, sage das ausdrücklich und erläutere, welche Punkte noch geprüft werden müssen.
+
+Liefere zuerst die Antwort in fünf Sätzen, danach Belege und Gegenargumente."
+aussagen-pruefen,Recherche & Analyse,Behauptungen überprüfen,"Fakten, Meinungen und unbelegte Aussagen trennen.","Prüfe die folgenden Behauptungen auf logische Fehler, fehlende Belege und mögliche Mehrdeutigkeiten.
+
+Behauptungen:
+[BEHAUPTUNGEN]
+
+Erstelle pro Aussage: (1) die eigentliche Behauptung, (2) was man zur Prüfung wissen müsste, (3) derzeitiger Befund, sofern verlässlich beurteilbar, (4) Grad der Unsicherheit. Erfinde keine Nachweise. Unterscheide klar zwischen „falsch“ und „nicht belegt“."
+vergleichen,Recherche & Analyse,Angebote fair vergleichen,"Nicht nur Funktionen, sondern Gesamtnutzen bewerten.","Vergleiche folgende Lösungen oder Angebote: [OPTIONEN].
+
+Nutzung: [ANWENDUNG]
+Budget: [BUDGET]
+Wichtig: [KRITERIEN]
+
+Stelle die relevanten Unterschiede in einer Tabelle dar: Kosten, Grenzen, Vorteile, Nachteile und offene Punkte. Nenne bei Preisen die Währung und den Stand der Information. Rate nicht bei fehlenden Daten. Empfiehl die beste Wahl für meinen konkreten Anwendungsfall und erkläre, wann sich eine Alternative lohnt."
+quellenlage-pruefen,Recherche & Analyse,Quellenlage prüfen,Die Belastbarkeit einer Aussage systematisch einschätzen.,"Zu prüfen ist die Aussage: [BEHAUPTUNG]. Vorliegende Quellen: [QUELLEN].
+
+Trenne Primärquellen, Sekundärberichte und Meinungen. Prüfe Veröffentlichungsdatum, Originalkontext, mögliche Interessenkonflikte und unabhängige Bestätigung. Erstelle ein kurzes Urteil mit „belegt“, „teilweise belegt“, „unbelegt“ oder „widerlegt“ samt Begründung. Wenn du keinen Webzugriff hast, sage, was nicht verifiziert werden konnte."
+recherchefragen-aufbauen,Recherche & Analyse,Recherchefragen aufbauen,Ein komplexes Thema in überprüfbare Teilfragen zerlegen.,"Ich muss [THEMA] recherchieren, um [ENTSCHEIDUNG] zu treffen.
+
+Leite höchstens acht konkrete Recherchefragen ab. Ordne sie nach Relevanz und definiere pro Frage, welche Art Quelle geeignet ist. Unterscheide zeitkritische Fakten von stabilem Grundlagenwissen. Markiere, welche fehlenden Informationen die spätere Entscheidung am stärksten beeinflussen."
+studie-verstaendlich-bewerten,Recherche & Analyse,Studie verständlich bewerten,"Ergebnisse, Methodik und Grenzen auseinanderhalten.","Analysiere diese Studie oder Zusammenfassung:
+[STUDIE]
+
+Erstelle eine Übersicht mit Fragestellung, Stichprobe, Methode, wichtigstem Ergebnis und wesentlichen Einschränkungen. Prüfe insbesondere Korrelation versus Kausalität, mögliche Verzerrungen und Generalisierbarkeit. Nenne keine Genauigkeit oder statistische Signifikanz, die im Text nicht belegt ist."
+datierte-marktuebersicht,Recherche & Analyse,Datierte Marktübersicht,Einen Markt ohne falsche Aktualitätsbehauptungen überblicken.,"Erstelle eine Marktübersicht zu [MARKT] in [REGION] mit Stand [DATUM].
+Wichtig sind [KRITERIEN].
+
+Gliedere nach Segmenten, typischen Angeboten, relevanten Akteuren, Preismodellen und offenen Risiken. Markiere jeden zeitabhängigen Fakt mit Quelle und Datum, sofern Recherche verfügbar ist. Ohne aktuelle Quellen liefere nur eine Recherchevorlage und kennzeichne unverifizierte Punkte."
+argumente-aus-dokumenten-extrahieren,Recherche & Analyse,Argumente aus Dokumenten extrahieren,Lange Quellen transparent auswerten.,"Analysiere diese Unterlagen zum Thema [THEMA]:
+[DOKUMENTE]
+
+Extrahiere die wichtigsten Aussagen mit präzisen Fundstellen, wenn vorhanden. Gruppiere Übereinstimmungen, Widersprüche und offene Fragen. Trenne Zitate, Paraphrasen und deine Interpretation. Erstelle am Schluss eine kurze Übersicht dessen, was sich allein aus den Dokumenten NICHT beantworten lässt."
+preisvergleich-mit-gesamtkosten,Recherche & Analyse,Preisvergleich mit Gesamtkosten,Angebote über den Einstiegspreis hinaus vergleichen.,"Vergleiche [ANGEBOTE] für [NUTZUNG] über [ZEITRAUM].
+
+Berücksichtige Anschaffung, laufende Kosten, Zubehör, Garantie, Folgekosten und Kündigungsbedingungen. Berechne eine Gesamtsumme nur aus bekannten Zahlen und kennzeichne Annahmen. Zeige Nachteile und entscheidende Datenlücken. Empfiehl eine Option für mein Szenario, nicht pauschal die billigste."
+zahlen-auf-widersprueche-pruefen,Recherche & Analyse,Zahlen auf Widersprüche prüfen,Eine Tabelle oder Aussage auf Plausibilität prüfen.,"Prüfe folgende Zahlen und Aussagen auf interne Konsistenz:
+[DATEN]
+
+Kontrolliere Einheiten, Prozentbasen, Summen, Bezugszeiträume und doppelte Zählungen. Liste konkrete Auffälligkeiten mit Fundstelle und Rechenweg auf. Unterscheide Fehler von lediglich ungewöhnlichen Werten. Ändere keine Werte stillschweigend."
+interviewfragen-fuer-recherche,Recherche & Analyse,Interviewfragen für Recherche,Gezielte Fragen statt beliebiger Gesprächsleitfäden.,"Ich interviewe [ZIELGRUPPE] zum Thema [THEMA], um [FRAGE] zu beantworten.
+
+Schreibe zwölf offene Fragen in sinnvoller Reihenfolge. Vermeide Suggestivfragen, Doppel-Fragen und bereits unterstellte Probleme. Ergänze zu jeder dritten Frage eine mögliche Nachfrage nach konkreten Beispielen. Gib einen kurzen Hinweis zur Auswertung der Antworten."
+bug-finden,Programmieren & Technik,Fehler systematisch finden,Debugging statt planloser Änderungsvorschläge.,"Hilf mir, einen Fehler systematisch zu diagnostizieren.
+
+Technologie/Umgebung: [UMGEBUNG]
+Erwartetes Verhalten: [ERWARTET]
+Tatsächliches Verhalten: [TATSAECHLICH]
+Fehlermeldung oder Code: [CODE_ODER_FEHLER]
+
+Nenne die wahrscheinlichsten Ursachen in sinnvoller Prüf-Reihenfolge. Schlage zuerst kurze, risikoarme Diagnoseschritte vor. Erkläre bei jeder Maßnahme, was das Ergebnis bedeutet. Gib konkrete Änderungen erst, wenn sie ausreichend begründet sind. Warne vor Datenverlust oder riskanten Befehlen."
+code-review,Programmieren & Technik,Code-Review durchführen,Risiken und Verbesserungen nach Relevanz sortieren.,"Führe ein praxisnahes Code-Review durch.
+
+Ziel des Codes: [ZIEL]
+Programmiersprache/Framework: [STACK]
+Code:
+[CODE]
+
+Prüfe zuerst Korrektheit, Sicherheit, unerwartete Randfälle und Verständlichkeit. Melde Probleme priorisiert als „kritisch“, „wichtig“ oder „optional“. Zeige für relevante Probleme eine konkrete Verbesserung. Vermeide kosmetische Umbauten ohne erkennbaren Nutzen. Falls du den Code nicht ausführen kannst, kennzeichne nicht getestete Annahmen."
+mvp-plan,Programmieren & Technik,Kleines MVP planen,Eine umsetzbare erste Version ohne Feature-Wildwuchs.,"Hilf mir, ein möglichst kleines MVP für [PROJEKTIDEE] zu planen.
+
+Zielgruppe: [ZIELGRUPPE]
+Hauptproblem: [PROBLEM]
+Zeitbudget: [ZEITBUDGET]
+Technische Rahmenbedingungen: [TECHNIK]
+
+Definiere den Kernnutzen und maximal fünf notwendige Funktionen. Liste bewusst auf, was NICHT Teil von Version 1 ist. Schlage eine einfache Architektur und drei kleine Umsetzungsschritte mit überprüfbaren Ergebnissen vor. Beende die Planung mit einem klaren Stopp-Kriterium."
+bug-report-verbessern,Programmieren & Technik,Bug-Report verbessern,Aus unscharfer Fehlermeldung einen reproduzierbaren Fall machen.,"Erstelle aus diesen Angaben einen reproduzierbaren Bug-Report:
+[FEHLERBESCHREIBUNG]
+System: [UMGEBUNG]. Erwartetes Verhalten: [ERWARTET].
+
+Gliedere in Schritte zur Reproduktion, Ist/Soll, Logs, mögliche Auslöser und noch fehlende Informationen. Leite keine Ursache als Tatsache ab. Formuliere eine minimale Testidee, um die wichtigste Hypothese zu prüfen."
+bestehenden-code-verstehen,Programmieren & Technik,Bestehenden Code verstehen,Einen fremden Codeabschnitt ohne Umbau erklären.,"Erkläre den folgenden Code auf Niveau [NIVEAU]:
+[CODE]
+
+Beginne mit Zweck und Datenfluss. Gehe anschließend die relevanten Funktionen, Seiteneffekte und Abhängigkeiten durch. Markiere Stellen, für die Kontext aus anderen Dateien fehlt. Gib ein konkretes Beispiel mit Eingabe und Ausgabe, wenn es sich aus dem Code sicher ableiten lässt. Verändere nichts."
+kleine-aenderung-sicher-planen,Programmieren & Technik,Kleine Änderung sicher planen,Den Scope einer Codeänderung eng halten.,"Ich möchte in [PROJEKT] folgende Änderung: [ÄNDERUNG].
+Relevante Dateien: [DATEIEN]. Einschränkungen: [EINSCHRÄNKUNGEN].
+
+Erstelle einen minimalen Implementierungsplan mit betroffenen Stellen, Risiken und relevanten Tests. Nenne ausdrücklich, was nicht geändert werden soll. Stoppe beim kleinsten funktionierenden Ergebnis. Keine zusätzlichen Refactorings ohne sachliche Notwendigkeit."
+testfaelle-aus-anforderungen,Programmieren & Technik,Testfälle aus Anforderungen,Akzeptanzkriterien systematisch abdecken.,"Leite aus diesen Anforderungen Testfälle ab:
+[ANFORDERUNGEN]
+
+Erstelle eine Tabelle mit Test-ID, Ausgangslage, Aktion, erwartetes Ergebnis und Priorität. Decke Happy Path, Grenzen, ungültige Eingaben und Rückfallverhalten ab. Vermeide doppelte Fälle. Weisen Anforderungen keine eindeutigen erwarteten Ergebnisse zu, markiere sie als offene Spezifikationsfrage."
+api-vertrag-entwerfen,Programmieren & Technik,API-Vertrag entwerfen,Eine Schnittstelle vor der Implementierung festlegen.,"Plane eine API für [ANWENDUNGSFALL]. Nutzerrollen: [ROLLEN]. Datenobjekte: [DATEN].
+
+Schlage Endpunkte mit Methode, Request, Response, Statuscodes, Authentifizierung und Validierungsregeln vor. Zeige eine JSON-Beispielanfrage und -antwort mit fiktiven Daten. Trenne zwingende Anforderungen von Designentscheidungen. Berücksichtige Fehlerfälle und Versionskompatibilität."
+sicherheitsreview-auf-anwendungsebene,Programmieren & Technik,Sicherheitsreview auf Anwendungsebene,Häufige Risiken in einer App erkennen.,"Prüfe dieses Anwendungskonzept oder diesen Code auf Sicherheitsrisiken:
+[KONZEPT_ODER_CODE]
+Technologie: [STACK].
+
+Betrachte Eingabevalidierung, Authentifizierung, Autorisierung, Geheimnisse, sensible Daten und Logging. Ordne Beobachtungen nach Auswirkung und Wahrscheinlichkeit; nenne konkrete Gegenmaßnahmen und Tests. Behaupte keine bestätigte Schwachstelle ohne nachvollziehbaren Beleg. Keine offensiven Angriffsschritte."
+datenmodell-fuer-mvp,Programmieren & Technik,Datenmodell für MVP,Ein überschaubares Schema mit Beziehungen planen.,"Entwirf ein Datenmodell für [ANWENDUNG].
+Anwendungsfälle: [USE_CASES]. Daten: [DATEN].
+
+Gib Entitäten mit Schlüsselfeldern, Beziehungen, eindeutigen Einschränkungen und sinnvollen Indizes an. Erkläre zwei wesentliche Modellierungsentscheidungen und was bewusst noch nicht modelliert wird. Zeige ein kleines Beispieldatenset. Priorisiere Einfachheit und spätere Erweiterbarkeit."
+deployment-checkliste,Programmieren & Technik,Deployment-Checkliste,Vor dem Go-live kritische Punkte abhaken.,"Erstelle eine Deployment-Checkliste für [PROJEKT] mit Stack [STACK] und Hosting [HOSTING].
+
+Gliedere in Konfiguration, Backups, Secrets, Migrationen, Monitoring, Rollback und Smoke-Tests. Formuliere jeden Prüfpunkt als beobachtbares Ja/Nein-Kriterium. Nenne Abbruchbedingungen und den minimalen Plan zur Wiederherstellung. Keine Annahmen über bereits aktivierte Dienste."
+wochenplanung,Alltag & Planung,Realistische Woche planen,Prioritäten und echte Freizeit berücksichtigen.,"Erstelle einen realistischen Wochenplan aus diesen Verpflichtungen und Vorhaben: [TERMINE_UND_AUFGABEN].
+
+Verfügbare Zeitfenster: [ZEITFENSTER]
+Wichtige Prioritäten: [PRIORITAETEN]
+Erholung/Freizeit: [FREIZEIT]
+
+Plane Pufferzeiten ein und überfülle die Woche nicht. Trenne Muss, Kann und bewusst verschoben. Gib eine Wochenübersicht und markiere maximal drei wirklich wichtige Ergebnisse. Weise auf Konflikte oder unrealistische Annahmen hin."
+kaufentscheidung,Alltag & Planung,Kaufentscheidung vorbereiten,"Bedarf prüfen, bevor Produkte gesammelt werden.","Hilf mir zu entscheiden, ob und was ich kaufen sollte.
+
+Produktkategorie: [PRODUKT]
+Anwendungsfall: [NUTZUNG]
+Budget: [BUDGET]
+Muss-Kriterien: [MUSS_KRITERIEN]
+
+Kläre zuerst, welche Eigenschaften tatsächlich relevant sind und welche nur Marketing sind. Vergleiche sinnvolle Lösungsarten, einschließlich „vorerst nichts kaufen“. Falls aktuelle Produkte oder Preise ohne Recherche nicht verlässlich feststehen, sage es. Gib eine knappe Empfehlung und mögliche versteckte Folgekosten."
+reiseplanung,Alltag & Planung,Reise sinnvoll planen,Ein Plan mit Puffer statt vollgestopfter Tagesabläufe.,"Plane eine Reise nach [REISEZIEL] für [DAUER].
+
+Interessen: [INTERESSEN]
+Budget: [BUDGET]
+Reisestil: [REISESTIL]
+
+Erstelle eine entspannte Tagesstruktur mit maximal zwei Hauptaktivitäten pro Tag, sinnvollen Wegen und Puffer. Trenne feste Empfehlungen von Optionen. Kennzeichne Öffnungszeiten, Preise oder Verfügbarkeit als prüfbedürftig, wenn du sie nicht aktuell bestätigen kannst. Berücksichtige Schlechtwetter-Alternativen."
+einfacher-essensplan,Alltag & Planung,Einfacher Essensplan,Alltagstaugliche Mahlzeiten mit Resteverwertung.,"Plane [TAGE] Tage Essen für [PERSONEN] Personen.
+Vorlieben: [VORLIEBEN]. Unverträglichkeiten: [UNVERTRÄGLICHKEITEN]. Budget: [BUDGET]. Zeit pro Mahlzeit: [ZEIT].
+
+Erstelle Gerichte mit grober Zubereitungszeit, einer zusammengefassten Einkaufsliste und zwei Möglichkeiten zur Resteverwertung. Vermeide exotische Zutaten ohne Nutzen. Für Allergien keine ungeprüfte Produktsicherheit behaupten."
+umzug-organisieren,Alltag & Planung,Umzug organisieren,Wichtige Schritte zeitlich priorisieren.,"Ich ziehe von [AUSGANGSORT] nach [ZIELORT] am [DATUM].
+Haushalt: [UMFANG]. Helfer: [HELFER]. Besonderheiten: [BESONDERHEITEN].
+
+Erstelle eine Checkliste mit Phasen vor, am und nach dem Umzug. Unterscheide zeitkritische Aufgaben von optionaler Optimierung. Markiere regionale oder vertragsabhängige Pflichten als zu prüfen. Gib die fünf nächsten konkreten Schritte an."
+packliste-nach-kontext,Alltag & Planung,Packliste nach Kontext,"Nur mitnehmen, was zur Reise passt.","Erstelle eine Packliste für [REISEART] nach [ZIEL] für [DAUER] im Zeitraum [ZEITRAUM].
+Gepäck: [GEPÄCK]. Aktivitäten: [AKTIVITÄTEN].
+
+Sortiere in Dokumente, Kleidung, Technik, Hygiene und Besonderes. Markiere Dinge, deren Bedarf vom Wetter oder von lokalen Regeln abhängt. Vermeide Doppelungen und unterscheide Muss von optional."
+monatsbudget-aufteilen,Alltag & Planung,Monatsbudget aufteilen,Ausgaben und Puffer nachvollziehbar planen.,"Hilf mir, ein Monatsbudget aufzubauen.
+Nettoeinnahmen: [EINNAHMEN]. Fixkosten: [FIXKOSTEN]. Variable Ausgaben: [VARIABLE_KOSTEN]. Ziele: [ZIELE].
+
+Berechne frei verfügbaren Betrag und einfache Szenarien für Sparrate und Puffer. Zeige alle Rechenschritte und fehlenden Angaben. Mach keine Anlage- oder Steuerzusagen. Die Planung soll realistisch sein, nicht maximal restriktiv."
+haushaltsaufgaben-fair-verteilen,Alltag & Planung,Haushaltsaufgaben fair verteilen,Einen tragfähigen Plan statt vager Vorsätze erstellen.,"Verteile Haushaltstätigkeiten für [PERSONEN] mit Verfügbarkeiten [VERFÜGBARKEIT] und Aufgaben [AUFGABEN].
+
+Unterscheide tägliche, wöchentliche und gelegentliche Arbeiten. Berücksichtige Zeit, Belastung und Präferenzen. Erstelle einen Wochenplan mit Vertretungsregel und einer kurzen Methode, nach zwei Wochen fair nachzujustieren."
+gewohnheit-klein-beginnen,Alltag & Planung,Gewohnheit klein beginnen,Eine realistische Routine an bestehende Abläufe hängen.,"Ich möchte [GEWOHNHEIT] aufbauen. Bisherige Hindernisse: [HINDERNISSE]. Geeigneter Auslöser im Alltag: [AUSLÖSER].
+
+Entwirf eine Zwei-Minuten-Einstiegsvariante, eine normale Variante und einen Rückfallplan für schlechte Tage. Definiere ein beobachtbares Wochenziel ohne Perfektionsanspruch. Nenne, welche Umgebungsänderung am meisten helfen könnte."
+reparieren-oder-ersetzen,Alltag & Planung,Reparieren oder ersetzen,"Kosten, Nutzen und Unsicherheit getrennt betrachten.","Soll ich [GEGENSTAND] reparieren oder ersetzen?
+Alter/Zustand: [ZUSTAND]. Reparaturangebot: [REPARATUR]. Ersatzangebot: [ERSATZ]. Nutzung: [NUTZUNG].
+
+Vergleiche Gesamtkosten, erwartbare Lebensdauer, Ausfallrisiko und Umweltaspekte. Kennzeichne fehlende Angaben; schätze nichts als Fakt. Gib eine Entscheidungsregel an, ab welchem zusätzlichen Aufwand sich welche Alternative lohnt."
+freizeit-bewusst-planen,Alltag & Planung,Freizeit bewusst planen,Eine Woche mit echten Pausen gestalten.,"Ich habe pro Woche [FREIE_ZEIT] Freizeit. Verpflichtungen: [VERPFLICHTUNGEN]. Was mir wichtig ist: [PRIORITÄTEN].
+
+Plane maximal drei aktive Vorhaben und mindestens zwei absichtlich freie Zeitblöcke. Berücksichtige Erholung und spontane Änderungen. Gib mir eine einfache Regel, um neue Ideen zu parken, statt sie sofort zu Aufgaben zu machen."
+prompt-verbessern,KI & Prompting,Schwachen Prompt verbessern,Aus einer vagen Frage eine klare Aufgabe machen.,"Verbessere meinen Prompt, ohne mein eigentliches Ziel zu verändern.
+
+Mein ursprünglicher Prompt:
+[PROMPT]
+
+Liefere zuerst die verbesserte, direkt kopierbare Fassung. Ergänze nur Anweisungen, die Ergebnisqualität oder Verlässlichkeit tatsächlich erhöhen. Danach erkläre in maximal fünf Stichpunkten die wichtigsten Änderungen. Falls entscheidender Kontext fehlt, verwende klar benannte Platzhalter statt Dinge zu erfinden."
+ki-ergebnis-pruefen,KI & Prompting,KI-Antwort kritisch prüfen,"Halluzinationen, Lücken und Scheingenauigkeit erkennen.","Prüfe die folgende KI-Antwort kritisch auf:
+- unbelegte Tatsachenbehauptungen
+- Widersprüche oder Denkfehler
+- übersehene Einschränkungen
+- fehlende Informationen
+- unnötige Komplexität
+
+Originalfrage: [FRAGE]
+KI-Antwort: [ANTWORT]
+
+Zitiere die problematischen Passagen kurz, erkläre warum sie problematisch sind und schlage eine präzisere Version vor. Erfinde keine Belege. Stelle Unsicherheit ausdrücklich dar."
+auftrag-klaeren,KI & Prompting,Unklaren Auftrag strukturieren,Aus einer Idee ein verständliches Briefing machen.,"Ich habe eine noch unfertige Idee: [IDEE].
+
+Hilf mir, daraus einen umsetzbaren Auftrag zu machen. Formuliere zuerst Ziel, Zielgruppe, erwartetes Ergebnis, Rahmenbedingungen und Erfolgskriterien. Trenne ausdrücklich, was feststeht, was eine Annahme ist und was noch offen ist. Mache sinnvolle Vorschläge, aber entscheide nichts stillschweigend für mich.
+
+Stelle abschließend höchstens drei Fragen, deren Antworten den nächsten Schritt wesentlich beeinflussen."
+prompt-mit-beispiel-kalibrieren,KI & Prompting,Prompt mit Beispiel kalibrieren,Aus einem Beispiel das gewünschte Ausgabeformat ableiten.,"Ich möchte wiederholt Antworten im folgenden Stil:
+[BEISPIEL]
+Neue Aufgabe: [AUFGABE]
+
+Leite aus dem Beispiel die relevanten Merkmale für Aufbau, Tiefe und Ton ab. Formuliere einen wiederverwendbaren Prompt, der diese Eigenschaften konkret beschreibt, ohne wortwörtliche Kopien zu verlangen. Füge eine kurze Checkliste hinzu, mit der ich Ergebnisse prüfen kann."
+prompt-gegen-halluzinationen-haerten,KI & Prompting,Prompt gegen Halluzinationen härten,"Lücken, Unsicherheit und Belege richtig behandeln.","Prüfe folgenden Prompt auf Stellen, die erfundene Fakten begünstigen:
+[PROMPT]
+
+Überarbeite ihn so, dass Fakten und Annahmen getrennt werden, fehlende Informationen gekennzeichnet sind und bei zeitabhängigen Aussagen Quellen oder eine klare Einschränkung verlangt werden. Erhalte die ursprüngliche Aufgabe. Gib zuerst den verbesserten Prompt, danach die drei wichtigsten Schutzmaßnahmen."
+ausgabeformat-exakt-festlegen,KI & Prompting,Ausgabeformat exakt festlegen,Ein verlässliches Format ohne unnötige Regeln definieren.,"Meine Aufgabe: [AUFGABE]. Gewünschtes Format: [FORMAT]. Pflichtfelder: [FELDER].
+
+Erstelle einen Prompt mit präziser Ausgabe-Spezifikation, einem kleinen Beispiel und Regeln für fehlende Werte. Halte Anweisungen so kurz wie möglich. Wenn das Format widersprüchliche Anforderungen enthält, zeige sie zuerst und schlage eine konsistente Version vor."
+prompt-in-zwei-schritte-aufteilen,KI & Prompting,Prompt in zwei Schritte aufteilen,Komplexe Aufgaben kontrolliert bearbeiten.,"Diese Aufgabe liefert oft unsaubere Antworten: [AUFGABE].
+
+Teile sie in zwei aufeinander aufbauende Prompts: Zuerst Anforderungen, Datenlücken und Vorgehen klären; danach mit bestätigtem Kontext das Ergebnis erzeugen. Definiere für beide Schritte konkrete Outputs. Baue eine Stop-Regel ein, damit nicht unnötig weitergearbeitet wird."
+ki-als-kritischer-redakteur,KI & Prompting,KI als kritischer Redakteur,Einen Entwurf auf Substanz statt Stilglanz prüfen.,"Begutachte diesen KI-generierten Entwurf:
+[ENTWURF]
+Zweck: [ZWECK]. Zielgruppe: [ZIELGRUPPE].
+
+Markiere unbelegte Behauptungen, generische Phrasen, Wiederholungen, schwache Übergänge und fehlenden Kontext. Priorisiere maximal fünf Änderungen. Überarbeite danach nur die betroffenen Stellen. Bewahre Stimme und Fakten des Originals."
+modellvergleich-fair-gestalten,KI & Prompting,Modellvergleich fair gestalten,Zwei KI-Modelle mit derselben Aufgabe testen.,"Erstelle einen fairen Vergleichstest für [MODELL_A] und [MODELL_B] zum Einsatzzweck [EINSATZ].
+
+Definiere fünf repräsentative Aufgaben, identische Eingaben, Bewertungskriterien, ein einfaches Punkteschema und eine Tabelle zur Ergebniserfassung. Berücksichtige Qualität, Geschwindigkeit, Korrekturbedarf und Kosten nur bei messbaren Daten. Werte keine Modelle ohne tatsächliche Testergebnisse aus."
+wiederverwendbare-systemanweisung,KI & Prompting,Wiederverwendbare Systemanweisung,Stabile Grundregeln von der einzelnen Aufgabe trennen.,"Ich nutze KI regelmäßig für [ARBEITSBEREICH]. Wiederkehrende Anforderungen: [ANFORDERUNGEN].
+
+Erstelle eine kurze, allgemeine Grundanweisung mit Ziel, Stil, Umgang mit Unsicherheit, Datenschutzgrenzen und Qualitätskriterien. Trenne sie von einem variablen Aufgabenteil. Vermeide absolute Regeln, die sinnvolle Ausnahmen blockieren. Maximal 250 Wörter."
+ergebnis-mit-rubrik-pruefen,KI & Prompting,Ergebnis mit Rubrik prüfen,Eine Antwort anhand transparenter Kriterien bewerten.,"Entwickle eine Bewertungsrubrik für KI-Ergebnisse zu [AUFGABE].
+Qualitätsmaßstab: [KRITERIEN].
+
+Lege vier bis sechs klar unterscheidbare Kriterien mit je einer beobachtbaren Skala von 0 bis 3 fest. Zeige, wie eine gute und eine schlechte Antwort in je einem Satz aussehen. Erfinde keine Bewertung realer Antworten, wenn kein Ergebnis vorliegt."
+zielgruppe-konkret-beschreiben,Marketing & Content,Zielgruppe konkret beschreiben,Bedürfnisse aus echten Beobachtungen ableiten.,"Analysiere die Zielgruppe für [PRODUKT_ODER_ANGEBOT].
+Bekannte Kundenaussagen: [KUNDENAUSSAGEN]. Markt: [MARKT].
+
+Unterscheide belegte Bedürfnisse von Hypothesen. Beschreibe typische Auslöser, Einwände, Alternativen und Entscheidungskriterien. Gib fünf konkrete Fragen an, mit denen wir ungesicherte Annahmen im Gespräch überprüfen können. Keine frei erfundenen Personas."
+landingpage-strukturieren,Marketing & Content,Landingpage strukturieren,Eine überzeugende Seite ohne leere Buzzwords planen.,"Entwirf eine Landingpage-Struktur für [ANGEBOT]. Zielgruppe: [ZIELGRUPPE]. Hauptnutzen: [NUTZEN]. Nachweise: [NACHWEISE].
+
+Liefere Reihenfolge und Zweck der Abschnitte, eine klare Headline, konkreten Einleitungstext und Call-to-Action. Wo Belege fehlen, nutze keine erfundenen Zahlen, Kundenstimmen oder Garantien. Bewerte die erste Bildschirmansicht besonders kritisch."
+contentplan-aus-echten-themen,Marketing & Content,Contentplan aus echten Themen,Nützliche Inhalte statt Reichweitenfüller entwickeln.,"Erstelle einen Contentplan für [KANAL] für [ZIELGRUPPE] über [ZEITRAUM]. Themenexpertise: [EXPERTISE]. Ziel: [ZIEL].
+
+Plane höchstens [ANZAHL] Beiträge mit konkretem Leserproblem, Kernnutzen, Format und Aufwand. Mische Grundlagen, Praxisbeispiele und häufige Fragen. Vermeide beliebige Motivationstexte und virale Versprechen. Weise auf Themen hin, die recherchiert werden müssen."
+produktbeschreibung-mit-substanz,Marketing & Content,Produktbeschreibung mit Substanz,Produkteigenschaften in verständlichen Kundennutzen übersetzen.,"Schreibe eine Produktbeschreibung für [PRODUKT]. Verifizierte Eigenschaften: [EIGENSCHAFTEN]. Zielgruppe: [ZIELGRUPPE]. Nutzungssituation: [NUTZUNG].
+
+Erstelle einen präzisen Einstieg, drei konkrete Vorteile mit Bezug auf Eigenschaften und ehrliche Grenzen. Benutze keine unbelegten Superlative oder erfundenen Zertifikate. Ergänze am Ende die wichtigsten noch fehlenden Produktinformationen."
+newsletter-mit-echtem-mehrwert,Marketing & Content,Newsletter mit echtem Mehrwert,Eine nützliche Ausgabe statt einer Werbemail schreiben.,"Erstelle einen Newsletter zu [THEMA] für [LESER]. Material und Fakten: [MATERIAL]. Ziel: [ZIEL].
+
+Schreibe eine sachliche Betreffzeile, einen kurzen Einstieg, drei konkrete Erkenntnisse und einen passenden nächsten Schritt. Behalte einen einheitlichen Ton bei und vermeide künstliche Dringlichkeit. Falls Zahlen genannt werden, kennzeichne ihren Ursprung."
+website-text-entfloskeln,Marketing & Content,Website-Text entfloskeln,Generische Formulierungen durch Aussagekraft ersetzen.,"Bewerte diesen Website-Text:
+[TEXT]
+
+Markiere leere Werbephrasen, unklare Versprechen und fehlende Informationen. Ersetze sie durch überprüfbare Aussagen aus [FAKTEN]. Erhalte die Markenstimme [TON]. Gib eine gestraffte Fassung und eine Liste offener Belege, die vor Veröffentlichung ergänzt werden müssten."
+faq-aus-kundenfragen,Marketing & Content,FAQ aus Kundenfragen,Fragen realistisch und verständlich beantworten.,"Erstelle eine FAQ aus diesen echten Fragen und Informationen:
+[FRAGEN_UND_FAKTEN]
+
+Gruppiere verwandte Fragen, formuliere klare Antworten in maximal 90 Wörtern und verlinke gedanklich auf einen passenden nächsten Schritt. Erfinde keine Preise, Lieferzeiten oder Bedingungen. Kennzeichne jede Frage, für die eine belastbare Antwort fehlt."
+kampagnen-idee-klein-testen,Marketing & Content,Kampagnen-Idee klein testen,Eine Marketinghypothese mit Messplan überprüfen.,"Ich möchte [ANGEBOT] über [KANAL] bewerben. Ziel: [ZIEL]. Budget: [BUDGET]. Zielgruppe: [ZIELGRUPPE].
+
+Schlage zwei klar unterschiedliche Botschaften für einen Test vor. Definiere Testzeitraum, Erfolgssignal, sinnvolle Vergleichsbasis und Abbruchkriterium. Trenne messbare Reaktionen von bloßen Klickzahlen. Keine Performance-Prognosen ohne Daten."
+lebenslauf-auf-stelle-zuschneiden,Karriere & Bewerbung,Lebenslauf auf Stelle zuschneiden,Vorhandene Erfahrung passend und wahrheitsgemäß darstellen.,"Passe meine Berufserfahrung an folgende Stelle an:
+Stellenanzeige: [STELLE]
+Erfahrung: [ERFAHRUNG]
+
+Extrahiere die fünf relevantesten Anforderungen und ordne echte Erfahrungen zu. Schreibe präzise Bulletpoints mit Tätigkeit und Ergebnis, soweit belegt. Erfinde keine Erfolge oder Tools. Zeige, welche Anforderungen durch mein Profil noch nicht nachgewiesen sind."
+anschreiben-ohne-standardfloskeln,Karriere & Bewerbung,Anschreiben ohne Standardfloskeln,Eine glaubwürdige Motivation formulieren.,"Schreibe ein kurzes Anschreiben für [ROLLE] bei [UNTERNEHMEN].
+Mein Hintergrund: [ERFAHRUNG]. Konkrete Motivation: [MOTIVATION]. Stellenausschreibung: [AUSSCHREIBUNG].
+
+Verbinde zwei passende Anforderungen mit nachweisbaren Erfahrungen. Vermeide „hiermit bewerbe ich mich“, allgemeine Begeisterung und erfundene Leistungen. Länge maximal 250 Wörter. Markiere Fakten, die ich vor Versand prüfen muss."
+bewerbungsgespraech-ueben,Karriere & Bewerbung,Bewerbungsgespräch üben,Fragen beantworten und ehrliches Feedback erhalten.,"Simuliere ein Vorstellungsgespräch für [ROLLE] in [BRANCHE]. Mein Profil: [PROFIL].
+
+Stelle eine Frage nach der anderen, darunter Fachfragen, Situationen und Motivation. Warte auf meine Antwort. Bewerte anschließend Struktur, Relevanz, Glaubwürdigkeit und Lücken. Gib eine bessere Antwortstruktur vor, ohne mir Erfahrungen in den Mund zu legen."
+gehaltsgespraech-vorbereiten,Karriere & Bewerbung,Gehaltsgespräch vorbereiten,Eine sachliche Verhandlung mit Belegen planen.,"Ich bereite ein Gehaltsgespräch vor. Rolle: [ROLLE]. Verantwortung: [VERANTWORTUNG]. Erfolge: [ERFOLGE]. Ziel: [ZIEL].
+
+Erstelle eine kurze Gesprächsstruktur mit begründeter Forderung, zwei Nachweisen und möglichen Reaktionen auf Einwände. Trenne persönliche Ziele von objektiv belegten Beiträgen. Ohne Markt- oder Tarifdaten keine marktüblichen Beträge behaupten."
+kompetenzluecken-identifizieren,Karriere & Bewerbung,Kompetenzlücken identifizieren,Einen Karrierewunsch in konkrete Lernfelder zerlegen.,"Ich möchte mittelfristig [ZIELROLLE] erreichen. Aktuelle Fähigkeiten: [FÄHIGKEITEN]. Anforderungen: [ANFORDERUNGEN].
+
+Erstelle eine Gap-Analyse: vorhanden, teilweise, fehlt, noch unklar. Priorisiere drei Lücken nach Nutzen und Lernaufwand. Definiere für jede eine kleine nachweisbare Übungsaufgabe. Vermeide Zertifikats-Empfehlungen ohne Bezug zur Rolle."
+arbeitszeugnis-verstaendlich-pruefen,Karriere & Bewerbung,Arbeitszeugnis verständlich prüfen,Formulierungen und Aussagen nüchtern einordnen.,"Analysiere diesen Zeugnistext:
+[ZEUGNIS]
+
+Fasse die ausdrücklich enthaltenen Leistungs- und Verhaltensaussagen zusammen. Markiere mehrdeutige oder ungewöhnliche Formulierungen und mögliche Auslassungen. Unterscheide sprachliche Beobachtung von rechtlicher Bewertung. Keine verbindliche Schulnote aus einzelnen Codes ableiten."
+erfolge-dokumentieren,Karriere & Bewerbung,Erfolge dokumentieren,Eigene Arbeit für Feedbackgespräche festhalten.,"Hilf mir, meine Beiträge aus diesen Notizen aufzubereiten:
+[NOTIZEN]
+
+Erstelle eine Übersicht mit Ausgangslage, meinem konkreten Anteil, Ergebnis und vorhandenen Belegen. Trenne Teamleistung von individuellem Beitrag. Wo Zahlen fehlen, verwende qualitative Wirkungen, ohne Prozentwerte zu erfinden. Schließe mit drei Beispielen für ein Mitarbeitergespräch."
+berufliche-entscheidung-abwaegen,Karriere & Bewerbung,Berufliche Entscheidung abwägen,"Entwicklung, Sicherheit und Alltag vergleichen.","Ich überlege zwischen [OPTIONEN] in meiner Karriere. Mir wichtig: [PRIORITÄTEN]. Rahmenbedingungen: [RAHMEN].
+
+Vergleiche Lernchancen, Arbeitsalltag, Risiken, Gehaltssicherheit und langfristige Optionen. Trenne bekannte Fakten von Annahmen und liste offene Fragen an Arbeitgeber. Gib eine bedingte Empfehlung unter meinen Prioritäten statt allgemeiner Karriere-Ratschläge."
+csv-bereinigen,Daten & Tabellen,CSV bereinigen,"Datenprobleme erkennen, ohne Informationen zu verlieren.","Ich habe diesen Datenausschnitt:
+[DATEN]
+Ziel der Auswertung: [ZIEL].
+
+Analysiere mögliche Probleme mit Dubletten, Datentypen, leeren Werten, Einheiten und Ausreißern. Erstelle einen konservativen Bereinigungsplan mit Regeln und Auswirkungen. Verändere keine Daten ohne meine Bestätigung. Zeige auf Wunsch nachvollziehbare Formeln oder Code."
+excel-formel-erklaeren,Daten & Tabellen,Excel-Formel erklären,Eine Formel nachvollziehbar aufbauen und testen.,"Ich brauche eine Formel in [EXCEL_ODER_SHEETS] für [AUFGABE].
+Beispieldaten mit Spalten: [SPALTEN]. Sprach-/Ländereinstellung: [LOCALE].
+
+Gib die exakte Formel und erkläre jede relevante Funktion. Zeige ein Mini-Beispiel mit erwarteter Ausgabe und mindestens einen Randfall. Benenne Unterschiede zwischen Excel und Google Sheets, falls sie für die Lösung relevant sind."
+kennzahlen-sinnvoll-auswaehlen,Daten & Tabellen,Kennzahlen sinnvoll auswählen,"Nur messen, was eine Entscheidung beeinflusst.","Für [PROJEKT_ODER_PROZESS] will ich den Erfolg messen. Ziel: [ZIEL]. Vorhandene Daten: [DATEN].
+
+Schlage höchstens sechs Kennzahlen mit Definition, Berechnungslogik, Datengrundlage und Frequenz vor. Unterscheide Ergebnis- und Frühindikatoren. Warne vor Kennzahlen, die leicht zu optimieren sind, ohne echten Nutzen zu stiften."
+dashboard-als-entscheidungswerkzeug,Daten & Tabellen,Dashboard als Entscheidungswerkzeug,Diagramme an tatsächliche Fragen koppeln.,"Plane ein Dashboard für [ZIELGRUPPE] zum Thema [THEMA]. Entscheidungen: [ENTSCHEIDUNGEN]. Datenfelder: [DATENFELDER].
+
+Gib die sinnvolle Reihenfolge der Kennzahlen, passende Diagrammtypen und notwendige Filter an. Erkläre, welche Grafik welche Frage beantwortet. Vermeide dekorative Charts und Kennzahlen ohne klare Definition. Markiere fehlende Datenquellen."
+a-b-test-auswerten,Daten & Tabellen,A/B-Test auswerten,Experimentergebnisse vorsichtig interpretieren.,"Analysiere dieses Experiment:
+[ERGEBNISSE]
+Hypothese: [HYPOTHESE]. Primäre Kennzahl: [KENNZAHL].
+
+Prüfe Gruppengrößen, Messzeitraum, Störfaktoren und Effektgröße. Rechne nur mit vorhandenen Zahlen; nenne keine statistische Signifikanz ohne ausreichende Daten und Methode. Trenne Beobachtung, Interpretation und Entscheidungsempfehlung."
+daten-in-klare-erkenntnisse-uebersetzen,Daten & Tabellen,Daten in klare Erkenntnisse übersetzen,Aus einer Tabelle eine kurze sachliche Analyse machen.,"Fasse diese Daten für [ZIELGRUPPE] zusammen:
+[DATEN]
+Leitfrage: [FRAGE].
+
+Nenne zuerst die wichtigsten drei belegten Befunde mit konkreten Werten und Bezug. Zeige anschließend Auffälligkeiten, mögliche Erklärungen als Hypothesen und Datenlücken. Vermeide Kausalbehauptungen aus bloßen Zusammenhängen. Gib zum Schluss zwei sinnvolle Anschlussfragen."
+sql-abfrage-entwerfen,Daten & Tabellen,SQL-Abfrage entwerfen,Eine lesbare Abfrage passend zum Datenmodell schreiben.,"Erstelle eine SQL-Abfrage für [FRAGE] im Dialekt [DIALEKT].
+Tabellen und Felder: [SCHEMA]. Beispielwerte: [BEISPIELE].
+
+Gib zuerst die Abfrage, danach eine kurze Erklärung der Joins, Filter und Aggregationen. Achte auf NULL-Fälle und mögliche Mehrfachzählung. Stelle bei uneindeutigen Spaltenbeziehungen eine präzise Rückfrage statt sie zu erfinden."
+datenqualitaet-auditieren,Daten & Tabellen,Datenqualität auditieren,Ein wiederholbares Prüfverfahren entwickeln.,"Entwirf einen Datenqualitätscheck für [DATENSATZ]. Schema: [SCHEMA]. Verwendung: [VERWENDUNG].
+
+Definiere prüfbare Regeln zu Vollständigkeit, Eindeutigkeit, Gültigkeit, Aktualität und Konsistenz. Gib je Regel Testmethode, Schwellwert nur falls begründbar und Reaktion bei Verstoß an. Priorisiere Fehler, die Entscheidungen besonders verfälschen könnten."
+geschichte-mit-klarer-dramaturgie,Kreativität & Projekte,Geschichte mit klarer Dramaturgie,"Eine Idee in Konflikt, Figuren und Szenen überführen.","Entwickle aus [GRUNDIDEE] eine Kurzgeschichte im Genre [GENRE] für [ZIELGRUPPE].
+
+Skizziere zunächst Hauptfigur, Ziel, Konflikt, Wendepunkt und Schluss. Schreibe dann eine Szene von [LÄNGE] Wörtern mit konkreten Handlungen und Dialogen statt bloßer Erklärung. Vermeide Klischees aus dem Genre, wo sie keinen erzählerischen Zweck erfüllen."
+kreativbriefing-fuer-design,Kreativität & Projekte,Kreativbriefing für Design,Ein verständliches Briefing ohne vage Stilwörter schreiben.,"Erstelle ein Designbriefing für [PROJEKT]. Zweck: [ZWECK]. Zielgruppe: [ZIELGRUPPE]. Kanäle: [KANÄLE]. Vorbilder und No-Gos: [REFERENZEN].
+
+Definiere Kommunikationsziel, Hierarchie der Inhalte, funktionale Anforderungen, gewünschte Wirkung und überprüfbare Abnahmekriterien. Verwandle Wörter wie „modern“ oder „premium“ in konkrete visuelle Entscheidungen."
+namensideen-mit-begruendung,Kreativität & Projekte,Namensideen mit Begründung,Namen nach Merkfähigkeit und Passung beurteilen.,"Ich suche einen Namen für [PROJEKT_ODER_PRODUKT]. Thema: [THEMA]. Zielgruppe: [ZIELGRUPPE]. Ton: [TON]. Einschränkungen: [EINSCHRÄNKUNGEN].
+
+Erstelle zwölf unterschiedliche Namensideen in drei Stilrichtungen. Bewerte Aussprache, Merkfähigkeit und thematische Passung kurz. Keine Verfügbarkeit von Domains oder Marken behaupten; gib eine Checkliste für die spätere Prüfung."
+workshop-mit-ergebnis-planen,Kreativität & Projekte,Workshop mit Ergebnis planen,Eine kreative Session durch Entscheidungen strukturieren.,"Plane einen Workshop über [THEMA] mit [PERSONEN] Personen und [DAUER] Minuten. Ziel: [ERGEBNIS].
+
+Baue die Agenda aus Einstieg, individueller Ideensammlung, gemeinsamer Bewertung und konkreter Entscheidung. Gib Anweisungen für die Moderation, Zeitlimits und ein dokumentierbares Output-Format. Berücksichtige stille Teilnehmende statt nur Lautstärke im Raum."
+konzept-auf-eine-seite-bringen,Kreativität & Projekte,Konzept auf eine Seite bringen,Viele Gedanken in eine klare Projektskizze verwandeln.,"Fasse folgende Gedanken zu einem Projektkonzept zusammen:
+[NOTIZEN]
+
+Struktur: Ausgangsproblem, Zielgruppe, Lösungsansatz, besonderes Merkmal, erste Version, offene Annahmen und nächster Test. Kürze auf maximal 400 Wörter. Trenne bereits entschiedene Punkte von Ideen und offenen Fragen. Stelle nicht mehr als fünf Rückfragen."
+originelle-varianten-statt-synonyme,Kreativität & Projekte,Originelle Varianten statt Synonyme,Eine Idee in bewusst verschiedene Richtungen entwickeln.,"Ausgangspunkt ist [IDEE]. Rahmen: [RAHMEN]. Ziel: [ZIEL].
+
+Entwickle fünf Varianten, die sich im Mechanismus oder Nutzungserlebnis wirklich unterscheiden, nicht nur im Namen. Formuliere für jede Kernidee, Nutzen, Aufwand und größte Unsicherheit. Wähle eine mutige, eine pragmatische und eine günstige Richtung aus und erkläre den Unterschied."
+szenen-fuer-ein-video-planen,Kreativität & Projekte,Szenen für ein Video planen,Aus einem Thema einen drehbaren Ablauf machen.,"Erstelle ein Storyboard für ein Video über [THEMA] mit Länge [LÄNGE] für [PLATTFORM]. Verfügbares Material: [MATERIAL].
+
+Gib eine Tabelle mit Zeitbereich, Bild, Ton/Text und Produktionshinweis. Jede Szene muss einen klaren Zweck haben. Plane mit tatsächlich verfügbaren Ressourcen. Keine nicht existierenden Zitate, Originalaufnahmen oder Statistiken erfinden."
+projekt-nach-scope-schuetzen,Kreativität & Projekte,Projekt nach Scope schützen,Eine kreative Idee in eine machbare erste Version begrenzen.,"Ich möchte [PROJEKT] umsetzen. Zeitrahmen: [ZEITRAHMEN]. Werkzeuge: [WERKZEUGE]. Unverzichtbar: [MUSS].
+
+Definiere die kleinste Version, die den Kernnutzen zeigt. Trenne Must-have, später und bewusst ausgeschlossen. Lege vier umsetzbare Meilensteine und für jeden eine klare Definition von fertig fest. Verhindere zusätzliche Verbesserungsrunden ohne neue Entscheidung."
